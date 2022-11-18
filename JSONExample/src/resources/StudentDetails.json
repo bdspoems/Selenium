@@ -1,0 +1,20 @@
+{
+  "StudentDetails":
+  [
+   {"data":[
+       {"studentName":"ChildA","Place":"USA"},
+       {"studentName":"ChildB","Place":"UK"},
+       {"studentName":"ChildB","Place":"UK"}
+    ],
+    "testname":"StudentTest"
+    },
+    {"metadata":[
+    
+       {"studentcity":"CityA","Need accomodation":"No"},
+       {"studentcity":"CityB","Need accomodation":"Yes"},
+       {"studentcity":"CityC","Need accomodation":"Yes"}
+    ],
+    "testname":"StudentAccom"
+    }
+   ]
+ }

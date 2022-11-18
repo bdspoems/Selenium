@@ -1,0 +1,43 @@
+testdata:
+ - testname: LoginTest 
+   data:  
+    - runmode: y 
+      browser: chrome 
+      email: abc@gmail.com 
+      password: passabc 
+    - runmode: n 
+      browser: mozilla 
+      email: ags@gmail.com 
+      password: passags 
+    - runmode: y 
+      browser: edge 
+      email: dog@gmail.com 
+      password: passdog 
+ - testname: RegressionTest 
+   data:  
+    - runmode: y 
+      browser: chrome 
+      email: abc@gmail.com 
+      password: passabc 
+    - runmode: n 
+      browser: mozilla 
+      email: ags@gmail.com 
+      password: passags 
+    - runmode: y 
+      browser: edge 
+      email: dog@gmail.com 
+      password: passdog 
+ - testname: SanityTest 
+   data:  
+    - runmode: y 
+      browser: chrome 
+      email: abc@gmail.com 
+      password: passabc 
+    - runmode: n 
+      browser: mozilla 
+      email: ags@gmail.com 
+      password: passags 
+    - runmode: y 
+      browser: edge 
+      email: dog@gmail.com 
+      password: passdog 

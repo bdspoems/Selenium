@@ -1,0 +1,6 @@
+This project is a simple Maven Project with just a pom.xml in which testnglibrary is added.
+I also added the testng library through help-->install a new software-->testng for eclipse
+Then while using the annotations in the class tetcase files I imported the testng Library 
+(This brought testng under maven dependencies)and then imported the import statements. 
+This project ran the testcases in any order
+I clicked the project and Run as Maven Clean and then Maven test or maven test directly will do.

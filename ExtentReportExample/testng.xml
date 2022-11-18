@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  tests are run parallel, you can write "methods" if you want the methods of a test 
+to run parallel but this will be stated within the test tag then instaed of the suit tag  -->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel= "tests">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testcases.LoginTest"/>
+    </classes>
+   </test> 
+  <test  name="Test1">
+    <classes>  
+      <class name="testcases.RegisterTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

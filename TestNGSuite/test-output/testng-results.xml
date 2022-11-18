@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-11T00:00:54 PDT" name="Suite" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- Suite -->
+  <suite started-at="2022-05-11T00:00:54 PDT" name="Suite (1)" finished-at="2022-05-11T00:00:54 PDT" duration-ms="23">
+    <groups>
+    </groups>
+    <test started-at="2022-05-11T00:00:54 PDT" name="Test" finished-at="2022-05-11T00:00:54 PDT" duration-ms="23">
+      <class name="suiteb.TestB">
+        <test-method is-config="true" signature="init()[pri:0, instance:suiteb.TestB@7ee8290b]" started-at="2022-05-11T00:00:54 PDT" name="init" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="TitleTest()[pri:0, instance:suiteb.TestB@7ee8290b]" started-at="2022-05-11T00:00:54 PDT" name="TitleTest" finished-at="2022-05-11T00:00:54 PDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TitleTest -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suiteb.TestB@7ee8290b]" started-at="2022-05-11T00:00:54 PDT" name="quit" finished-at="2022-05-11T00:00:54 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="assertAll()[pri:0, instance:suiteb.TestB@7ee8290b]" started-at="2022-05-11T00:00:54 PDT" name="assertAll" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertAll -->
+      </class> <!-- suiteb.TestB -->
+      <class name="suiteb.TestA">
+        <test-method signature="nameinCaps()[pri:0, instance:suiteb.TestA@1f59a598]" started-at="2022-05-11T00:00:54 PDT" name="nameinCaps" finished-at="2022-05-11T00:00:54 PDT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nameinCaps -->
+        <test-method is-config="true" signature="init()[pri:0, instance:suiteb.TestA@1f59a598]" started-at="2022-05-11T00:00:54 PDT" name="init" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suiteb.TestA@1f59a598]" started-at="2022-05-11T00:00:54 PDT" name="quit" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="assertAll()[pri:0, instance:suiteb.TestA@1f59a598]" started-at="2022-05-11T00:00:54 PDT" name="assertAll" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertAll -->
+      </class> <!-- suiteb.TestA -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite (1) -->
+  <suite started-at="2022-05-11T00:00:53 PDT" name="Suite (0)" finished-at="2022-05-11T00:00:54 PDT" duration-ms="136">
+    <groups>
+    </groups>
+    <test started-at="2022-05-11T00:00:53 PDT" name="Test" finished-at="2022-05-11T00:00:54 PDT" duration-ms="136">
+      <class name="suitea.LoginTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:suitea.LoginTest@77f1baf5]" started-at="2022-05-11T00:00:54 PDT" name="init" finished-at="2022-05-11T00:00:54 PDT" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="greaterTest()[pri:1, instance:suitea.LoginTest@77f1baf5]" started-at="2022-05-11T00:00:54 PDT" name="greaterTest" finished-at="2022-05-11T00:00:54 PDT" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- greaterTest -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suitea.LoginTest@77f1baf5]" started-at="2022-05-11T00:00:54 PDT" name="quit" finished-at="2022-05-11T00:00:54 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="init()[pri:0, instance:suitea.LoginTest@77f1baf5]" started-at="2022-05-11T00:00:54 PDT" name="init" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="smallerTest()[pri:2, instance:suitea.LoginTest@77f1baf5]" started-at="2022-05-11T00:00:54 PDT" name="smallerTest" finished-at="2022-05-11T00:00:54 PDT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smallerTest -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suitea.LoginTest@77f1baf5]" started-at="2022-05-11T00:00:54 PDT" name="quit" finished-at="2022-05-11T00:00:54 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="assertAll()[pri:0, instance:suitea.LoginTest@77f1baf5]" started-at="2022-05-11T00:00:54 PDT" name="assertAll" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertAll -->
+      </class> <!-- suitea.LoginTest -->
+      <class name="suitea.RegisterTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:suitea.RegisterTest@41a2befb]" started-at="2022-05-11T00:00:54 PDT" name="init" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="chkUsername()[pri:0, instance:suitea.RegisterTest@41a2befb]" started-at="2022-05-11T00:00:54 PDT" name="chkUsername" finished-at="2022-05-11T00:00:54 PDT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chkUsername -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suitea.RegisterTest@41a2befb]" started-at="2022-05-11T00:00:54 PDT" name="quit" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="init()[pri:0, instance:suitea.RegisterTest@41a2befb]" started-at="2022-05-11T00:00:54 PDT" name="init" finished-at="2022-05-11T00:00:54 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="chkpwdlength()[pri:0, instance:suitea.RegisterTest@41a2befb]" started-at="2022-05-11T00:00:54 PDT" name="chkpwdlength" finished-at="2022-05-11T00:00:54 PDT" depends-on-methods="suitea.RegisterTest.chkUsername" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chkpwdlength -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suitea.RegisterTest@41a2befb]" started-at="2022-05-11T00:00:54 PDT" name="quit" finished-at="2022-05-11T00:00:54 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="assertAll()[pri:0, instance:suitea.RegisterTest@41a2befb]" started-at="2022-05-11T00:00:54 PDT" name="assertAll" finished-at="2022-05-11T00:00:54 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertAll -->
+      </class> <!-- suitea.RegisterTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite (0) -->
+</testng-results>
