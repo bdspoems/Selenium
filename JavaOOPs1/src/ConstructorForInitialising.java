@@ -50,3 +50,11 @@ public class ConstructorForInitialising {
 	}
 
 }
+
+//note: if you press cmd n mousepad, the word will become a link 
+//n take u to the implementation or declaration
+// when you double click in front of a code line, it puts a breakpoint 
+//and you can run your code by holding down fn + clicking F6 to go to the 
+//next line and see each lines execution in the perspective window
+
+
