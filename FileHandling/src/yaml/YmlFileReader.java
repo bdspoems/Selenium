@@ -13,6 +13,7 @@ import com.esotericsoftware.yamlbeans.YamlReader;
 public class YmlFileReader {
 /*yamlbeans.jar needs to be configured into buildpath as a library
  * All curly brackets are Map(key value pair)and all square brackets are Lists(array)
+ * So if anything is in curly, collect it in Map object
     */
    
 	public static void main(String[] args) throws FileNotFoundException, YamlException  {
