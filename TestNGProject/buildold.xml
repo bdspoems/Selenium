@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="TestNGProject" default="package" basedir=".">
+  <property name="src"   value="src"/>
+  <property name="build" value="build"/>
+  <property name="ws.jars" value="/Users/urvashimehta/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar "/>
+  <!--  org.junit_4.13.2.v20211018-1956.jar"/> -->
+  <property name="test.reportsDir"   value="${basedir}/reports"/>
+
+<target name="all" depends="clean, compile" description="Builds the whole project">
+    <echo>Doing all</echo>
+  </target>
+  <path id="testcase.path">
+    <pathelement location="${build}"/>
+     <fileset dir="${ws.jars}">
+       <include name="*.jar"/>
+     </fileset>
+
+  </path>
+  
+  <!-- 
+  <target name="start-selenium-server">
+    <java jar="${basedir}/lib/selenium-server.jar"/>
+  </target>
+   -->
+<target name="clean" description="Removes previous build">
+    <delete verbose="true">
+      <fileset dir="${build}"/>
+    </delete>
+  </target>
+
+<target name="compile" depends="clean" description="compile whole project">
+    <echo>compile ${ant.project.name} </echo>
+   <!--  <copy file="${src}/splashscreen.jpeg" tofile="${build}/splashscreen.jpeg"/> -->
+    <javac srcdir="${src}" destdir="${build}" includes="**/*"/> <!--Purchase.class -->
+  </target>
+
+			
+<target name="run">
+	  <delete includeemptydirs="true" quiet="true">
+	    <fileset dir="${test.reportsDir}" includes="**/*"/>
+	  </delete>	
+	  <junit fork="yes" haltonfailure="no" printsummary="yes">
+	      <classpath refid="testcase.path"/>
+	    <batchtest todir="${test.reportsDir}" fork="true">	
+	       <fileset dir="${build}">
+             <include name="${basedir}/Purchase.class"/>
+           </fileset>
+        </batchtest>
+        <formatter type="xml" />
+        <classpath refid="testcase.path" />
+      </junit>  
+</target>
+</project>    		
+<!--  build.xml from :https://javarevisited.blogspot.com/2010/10/ant-tutorial-part-2.html#axzz7gIs6VZfc-->

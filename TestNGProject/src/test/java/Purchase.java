@@ -1,7 +1,6 @@
 package test.java;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class Purchase {
 
@@ -17,7 +16,7 @@ public class Purchase {
 		System.out.println("Confirm");
 		
 	}
-	@Ignore//skip the test
+	
 	@Test
 	public void buy()
 	{

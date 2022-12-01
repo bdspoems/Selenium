@@ -1,55 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project name="TestNGProject" default="package" basedir=".">
-  <property name="src"   value="src"/>
-  <property name="build" value="build"/>
-  <property name="ws.jars" value="/Users/urvashimehta/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar "/>
-  <!--  org.junit_4.13.2.v20211018-1956.jar"/> -->
-  <property name="test.reportsDir"   value="${basedir}/reports"/>
-
-<target name="all" depends="clean, compile" description="Builds the whole project">
-    <echo>Doing all</echo>
-  </target>
-  <path id="testcase.path">
-    <pathelement location="${build}"/>
-     <fileset dir="${ws.jars}">
-       <include name="*.jar"/>
-     </fileset>
-
-  </path>
-  
-  <!-- 
-  <target name="start-selenium-server">
-    <java jar="${basedir}/lib/selenium-server.jar"/>
-  </target>
-   -->
-<target name="clean" description="Removes previous build">
-    <delete verbose="true">
-      <fileset dir="${build}"/>
-    </delete>
-  </target>
-
-<target name="compile" depends="clean" description="compile whole project">
-    <echo>compile ${ant.project.name} </echo>
-   <!--  <copy file="${src}/splashscreen.jpeg" tofile="${build}/splashscreen.jpeg"/> -->
-    <javac srcdir="${src}" destdir="${build}" includes="**/*"/> <!--Purchase.class -->
-  </target>
-
-			
-<target name="run">
-	  <delete includeemptydirs="true" quiet="true">
-	    <fileset dir="${test.reportsDir}" includes="**/*"/>
-	  </delete>	
-	  <junit fork="yes" haltonfailure="no" printsummary="yes">
-	      <classpath refid="testcase.path"/>
-	    <batchtest todir="${test.reportsDir}" fork="true">	
-	       <fileset dir="${build}">
-             <include name="${basedir}/Purchase.class"/>
-           </fileset>
-        </batchtest>
-        <formatter type="xml" />
-        <classpath refid="testcase.path" />
-      </junit>  
-</target>
-</project>    		
-<!--  build.xml from :https://javarevisited.blogspot.com/2010/10/ant-tutorial-part-2.html#axzz7gIs6VZfc-->
+<project name="Sample Ant build" basedir=".">
+	<!-- ========== Initialize Properties =================================== -->
+	<!-- set global properties for build -->
+	<property name="basedir" value="." />
+	<property name="lib" value="/Users/urvashimehta/.m2/repository/org/testng/testng/7.0.0" />
+	<property name="src" value="${basedir}/src" />
+	<property name="bin" value="${basedir}/bin" />
+	<property name="test.dest" value="${basedir}/build" />
+	<property name="report-dir" value="${basedir}/Test-Report" />
+	<property name="testng-report-dir" value="${report-dir}/TestNGreport" />
+	
+	<!-- ====== Set the classpath ====  -->
+	<path id="classpath">
+		<pathelement location="${bin}" />
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<!-- Delete directories  -->
+	<target name="delete-dir">
+		<delete dir="${bin}" />
+		<delete dir="${report-dir}" />
+	</target>
+	
+	<!-- Creating directories -->
+	<target name="create" depends="delete-dir">
+		<mkdir dir="${bin}" />
+		<mkdir dir="${report-dir}" />
+	</target>
+	
+	<!-- Compile the java code from ${src} into ${bin} -->
+	<target name="compile" depends="create">
+		<javac srcdir="${src}" classpathref="classpath" includeAntRuntime="No" destdir="${bin}" />
+		<echo> /* Compiled Directory Classes */ </echo>
+	</target>
+	
+	<!-- Runs the file and generates Reportng report for TestNG-->
+	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="classpath" />
+	<!--<target name="run">
+	<junitreport todir="${report-dir}">
+	   <fileset dir="${report-dir}">
+	     <include name="testng.xml"/> 
+		<!or you can include name = "*.jars" in dir "${ws.jars}”>
+		<report todir="${report-dir}"/>
+    	</fileset>
+	</junitreport>
+	</target>
+	-->
+	
+	<target name="run" depends="compile"><!--<target name="testng-execution" depends="compile">-->
+		<mkdir dir="${testng-report-dir}" />
+		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
+			<xmlfileset dir="${basedir}" includes="testng.xml" />
+		</testng>
+	</target>
+</project>
