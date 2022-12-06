@@ -15,14 +15,15 @@
 	    <!-- Delete the ${build} and ${dist} directory trees -->
 	    <delete dir="${build}"/>
 	    <delete dir="${report}"/>
+		<echo message=" deleted dir for classes and reports"/>
 	</target>	
-  <target name="init">
+  <target name="init" depends="clean" >
     <!-- Create the time stamp -->
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
     <mkdir dir="${build}"/>
   	<mkdir dir="${report}"/>
-   
+  	<echo message=" made dirs"/>
   </target>
 	<path id="testcase.path">
 	    <pathelement location="${build}"/>
@@ -57,9 +58,18 @@
     
 
 	<target name = "run" depends="compile">
-		
+		<!--<java jar="/Users/urvashimehta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar" fork="true" spawn="true"/>-->
+				<java jar="${ws.jars}" fork="true" spawn="true"/>
+		<!--<junit fork ="yes" haltonfailure="no" printsummary="yes">-->
+		<echo message=" compiling "/>
+				 <!-- <classpath refid="testcase.path"/>-->
+				  <fileset dir="${build}">
+					  <include name="TestRunner.class"/>
+				  </fileset>
+				
+		<!--</junit>-->
 	   <junitreport todir="${report}">
-			
+	   
 			<report todir="${report}"/>
 			<report format="frames" todir="${report}/html"/>
 		</junitreport>
