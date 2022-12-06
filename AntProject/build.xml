@@ -10,11 +10,18 @@
   <property name="dist" location="${basedir}/dist"/>
   <property name="report" location="${basedir}/reports"/>
   
+	<target name="clean"
+	        description="clean up">
+	    <!-- Delete the ${build} and ${dist} directory trees -->
+	    <delete dir="${build}"/>
+	    <delete dir="${report}"/>
+	</target>	
   <target name="init">
     <!-- Create the time stamp -->
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
     <mkdir dir="${build}"/>
+  	<mkdir dir="${report}"/>
    
   </target>
 	<path id="testcase.path">
@@ -26,6 +33,7 @@
 	     </fileset>
 
 	  </path>
+	
   <target name="compile" depends="init"
         description="compile the source">
   	
@@ -45,25 +53,12 @@
     <jar jarfile="${dist}/lib/AntProject-${DSTAMP}.jar" basedir="${build}"/>
   </target>
 
-  <target name="clean"
-        description="clean up">
-    <!-- Delete the ${build} and ${dist} directory trees -->
-    <delete dir="${build}"/>
-    <delete dir="${report}"/>
+  
     
-  </target>
-	<target name = "run">
-		<!--<java jar="/Users/urvashimehta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar" fork="true" spawn="true"/>-->
-		<java jar="${ws.jars}" fork="true" spawn="true"/>
-		<!--<junit fork ="yes" haltonfailure="no" printsummary="yes">-->
+
+	<target name = "run" depends="compile">
 		
-		 <!-- <classpath refid="testcase.path"/>-->
-		  <fileset dir="${build}">
-			  <include name="TestRunner.class"/>
-		  </fileset>
-		
-	  <!-- </junit>-->
-		<junitreport todir="${report}">
+	   <junitreport todir="${report}">
 			
 			<report todir="${report}"/>
 			<report format="frames" todir="${report}/html"/>
