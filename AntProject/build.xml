@@ -10,22 +10,36 @@
   <property name="dist" location="${basedir}/dist"/>
   <property name="report" location="${basedir}/reports"/>
   
+	<path id="testcase.path">
+		 <pathelement location ="${build}"/>
+		<fileset dir="${ws.jars}">
+			<include name="org.junit_4.13.2.v20211018-1956.jar"/>
+			<include name="org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+		</fileset>	
+	</path>	
+	
+	
 	<target name="clean"
 	        description="clean up">
 	    <!-- Delete the ${build} and ${dist} directory trees -->
 	    <delete dir="${build}"/>
-	    <delete dir="${report}"/>
-		<echo message=" deleted dir for classes and reports"/>
+		<!--<delete dir="${report}"/>-->
+		<echo message=" deleted dir build for classes... "/>
 	</target>	
   <target name="init" depends="clean" >
     <!-- Create the time stamp -->
-    <tstamp/>
+    <tstamp>
+    	<format property="start.time"   pattern="MM/dd/yyyy hh:mm aa" />
+  	</tstamp>
+  	<condition property="ANT" value="${env.ANT_HOME}/bin/ant.bat"
+  		else="${env.ANT_HOME}/bin/ant">
+  		<os family="mac" />
+  	</condition>
+  	
     <!-- Create the build directory structure used by compile -->
-    <mkdir dir="${build}"/>
-  	<mkdir dir="${report}"/>
-  	<echo message=" made dirs"/>
+    
   </target>
-	<path id="testcase.path">
+	<!--<path id="testcase.path">
 	    <pathelement location="${build}"/>
 	     <fileset dir="${ws.jars}">
 	     	
@@ -34,17 +48,27 @@
 	     </fileset>
 
 	  </path>
-	
-  <target name="compile" depends="init"
+	-->
+  <target name="compile" depends="init,clean"
         description="compile the source">
-  	
-
+  	<mkdir dir="${build}"/> 	
+  	<echo message=" classpath --------: ${testcase.path}"/>
+  	<echo message="compiling..."/>
     <!-- Compile the Java code from ${src} into ${build} -->
-    <javac srcdir="${src}" destdir="${build}"
-    	classpathref="testcase.path">
+    <javac debug="true" srcdir="${src}" destdir="${build}" includeAntRuntime="No" classpathref="testcase.path" ><!--target="1.5" source="1.5"-->
+  	
     </javac>
   </target>
-
+    
+	
+  <target name="build" depends="init">
+  </target>
+	
+  <target name="usage" depends="init">
+  	<echo> ant run will execute the test
+  	</echo>
+ </target>
+	
   <target name="dist" depends="compile"
         description="generate the distribution">
     <!-- Create the distribution directory -->
@@ -56,23 +80,30 @@
 
   
     
-
+	
 	<target name = "run" depends="compile">
-		<!--<java jar="/Users/urvashimehta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar" fork="true" spawn="true"/>-->
-				<java jar="${ws.jars}" fork="true" spawn="true"/>
-		<!--<junit fork ="yes" haltonfailure="no" printsummary="yes">-->
+		<delete dir="${report}"></delete>
+		 <mkdir dir="${report}"/>	
 		<echo message=" compiling "/>
-				 <!-- <classpath refid="testcase.path"/>-->
-				  <fileset dir="${build}">
-					  <include name="TestRunner.class"/>
-				  </fileset>
-				
-		<!--</junit>-->
-	   <junitreport todir="${report}">
+		<!--<java jar="${ws.jars}" fork="true" spawn="true" classpathref="testcase.path" />	-->
+		<junit fork ="yes" haltonfailure="no" printsummary="yes">
+			<classpath refid="testcase.path"/>
+			<formatter type="plain" usefile="false" />	
+		    <test  name= "${build}/TestRunner" todir ="${report}"/>
+			<!-- <classpath> 
+				  <pathelement location ="/Users/urvashimehta/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar,/Users/urvashimehta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+				  <pathelement location ="${build}"/>
+			  </classpath>-->
+		</junit>
+	</target>	   		
+	<target name = "report"  depends="run">	
+		
+		 
+	      <junitreport todir="${report}">
 	   
 			<report todir="${report}"/>
 			<report format="frames" todir="${report}/html"/>
-		</junitreport>
-	</target>
+		 </junitreport>
+	   </target>
 	
 </project>

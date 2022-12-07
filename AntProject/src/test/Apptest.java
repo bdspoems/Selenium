@@ -21,20 +21,22 @@ package test;
 	    @Test
 	    public void shouldAnswerWithTrue()
 	    {
+	    	System.out.println("shouldAnswerWithTrue()");
 	        Assert.assertTrue( true );
 	    }
 	    
 	    @Test
 	    public void shouldnotFail()
 	    {
-	    	Assert.assertFalse(false);
+	    	System.out.println("shouldnotFail()");
+	    	Assert.assertTrue(true);
 	    	flag = true;
 	    }
 	    @Test
 	    public void onlyIf()
 	    {
 	    	if(flag)
-	    		System.out.println ("\nAll good");
+	    		System.out.println("onlyIf");
 	    	   
 	    }
 	}

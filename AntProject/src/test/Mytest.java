@@ -8,7 +8,8 @@ public class Mytest {
 	@Test
     public void isTitleRight()
     {
-        Assert.assertEquals("facebook","Facebook" );
-        Assert.fail();
+		System.out.println("isTitleRight()");
+        Assert.assertEquals("Facebook","facebook" );
+       
     }
 }
