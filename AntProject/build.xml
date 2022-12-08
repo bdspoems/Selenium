@@ -89,20 +89,24 @@
 		<junit fork ="yes" haltonfailure="no" printsummary="yes">
 			<classpath refid="testcase.path"/>
 			<formatter type="plain" usefile="false" />	
-		    <test  name= "${build}/TestRunner" todir ="${report}"/>
+		    <batchtest   todir ="${report}" fork="true">
+			   <fileset dir="${build}">
+				    <include name="test.TestRunner.class"/>
+			   </fileset>
+			</batchtest>
 			<!-- <classpath> 
 				  <pathelement location ="/Users/urvashimehta/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar,/Users/urvashimehta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
 				  <pathelement location ="${build}"/>
 			  </classpath>-->
 		</junit>
-	</target>	   		
-	<target name = "report"  depends="run">	
 		
 		 
 	      <junitreport todir="${report}">
-	   
+	      	<fileset dir="${report}">
+	      		 <include name="TEST-*.xml"/>
+	        </fileset>
 			<report todir="${report}"/>
-			<report format="frames" todir="${report}/html"/>
+			<!-- <report format="frames" todir="${report}/html"/> -->
 		 </junitreport>
 	   </target>
 	

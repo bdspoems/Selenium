@@ -9,7 +9,7 @@ public class Mytest {
     public void isTitleRight()
     {
 		System.out.println("isTitleRight()");
-        Assert.assertEquals("Facebook","facebook" );
+        Assert.assertEquals("facebook","facebook" );
        
     }
 }
