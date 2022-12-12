@@ -81,7 +81,7 @@
   
     
 	
-	<target name = "run" depends="compile">
+	<target name="run" depends="compile">
 		<delete dir="${report}"></delete>
 		 <mkdir dir="${report}"/>	
 		<echo message=" compiling "/>
@@ -94,10 +94,13 @@
 				    <include name="test.TestRunner.class"/>
 			   </fileset>
 			</batchtest>
-			<!-- <classpath> 
-				  <pathelement location ="/Users/urvashimehta/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar,/Users/urvashimehta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
-				  <pathelement location ="${build}"/>
-			  </classpath>-->
+			<test name= "AntProject" todir ="${report}"/>
+		    <classpath> 
+		    	  <pathelement location ="${build}/test"/>
+				  <!--<pathelement location ="/Users/urvashimehta/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar,/Users/urvashimehta/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>-->
+				  
+			  </classpath>
+			
 		</junit>
 		
 		 

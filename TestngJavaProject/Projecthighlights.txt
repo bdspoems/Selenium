@@ -1,0 +1,18 @@
+Made a java project
+created testcases package  in src
+As testng was already installed , imported the testng library
+made a class to write testng annotations 
+priority =1
+dependsOnMethods="{testone, testtwo}"
+enable=false//skips test
+expectedException=()
+throw new skipException("error mesg")
+Assert class Assert.assertTrue(),Assert.assertFalse(),Assert.assertEquals(val1,val2),Assert.fail();pauses the test on any error. 
+There is a SoftAssert class with same syntax as Assert statements, which will not pause the test on error but will print all errors when we say 
+sftassert.assertAll();
+try{}catch(Throwable e){} // will pass the failed test as the error is caught but we want the failed tests to fail
+so we use ErrorCollector class
+we define as a global @Rule annotation where initializing this class, addError(e) each time we catch the throwable, and it will print all these errors when run
+To pass value obtained from one class and give it to other, ITextContext interface is used as argument to each test. One ITextContext Object common to all the test in the class so value can be passed to each test
+ITextContext context--> context.setAttribute("propertyname","value") --> context.getAttribute("propertyname");This returns an object type so need to cast it to the appropriate type
+String status = (String)context.getAttribute("propertyname");

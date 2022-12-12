@@ -29,7 +29,7 @@ public class JunitTest {
 		
 		if(true)
 			Assume.assumeTrue(false);
-		System.out.println("3,reject");
+		System.out.println("3,skipped");
 	}
 	
 	@Test

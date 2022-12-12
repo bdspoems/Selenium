@@ -1,7 +1,7 @@
 package com.maven;
 
 public class PrintName {
-/* made a maven project from eclipse and added the group id as package name in main/java as it was not made
+/* made a maven project from eclipse to run from cmd prompt and added the group id as package name in main/java as it was not made
  * In pom.xml added build tag,added exec plugin in it to run this java file from cmd prompt
  * added goal java in executions tag, nm of file and cmd line arguments in configuration of plugin.
  * gave cmd mvn clean, 

@@ -1,0 +1,4 @@
+made a java class with testng as library
+made a listener class implementing ITestListener
+wrote methods to be invoked for sure after each test run
+wrote a timeout annotation for a test which will fail if the test runs for more than 800ms

@@ -11,7 +11,7 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class Parameterization {
 /*
- * made this one to run a testcase with a number of data
+ * made this one to run a junit testcase with a number of data
  * add JUnit4 lib
  * declare class as @RunWith(Parameterized.class), add a test case, global vars and a source for data with @Parameters tag
  to see the reports in the target/site/ added maven surefire plugin as well as maven surefire reporting plugin to pom.xml... but doesn't seem to make any reports

@@ -23,6 +23,7 @@ public class ExcelReader {
 			System.out.println("\n");
 		}
 		System.out.println("end");
+		//System.getProperty ctrl spacebar to see the command completion help
 	}
 	
 }

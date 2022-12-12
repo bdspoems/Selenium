@@ -1,1 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project name="AntProject" default="dist" basedir=".">
+  <description>
+    simple example build file
+  </description>
+  <!-- set global properties for this build -->
+  <property name="ws.jars" location="/Users/urvashimehta/.p2/pool/plugins"/>	
+  <property name="src" location="${basedir}/src"/>
+  <property name="build" location="${basedir}/build"/>
+  <property name="dist" location="${basedir}/dist"/>
+  <property name="report" location="${basedir}/reports"/>
+  
+	<target name="clean"
+	        description="clean up">
+	    <!-- Delete the ${build} and ${dist} directory trees -->
+	    <delete dir="${build}"/>
+		<!--<delete dir="${report}"/>-->
+		<echo message=" deleted dir for classes and reports"/>
+	</target>	
+  <target name="init" depends="clean" >
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  	
+  	<echo message=" made dirs"/>
+  </target>
+	<path id="testcase.path">
+	    <pathelement location="${build}"/>
+	     <fileset dir="${ws.jars}">
+	     	
+	       <include name="org.junit_4.13.2.v20211018-1956.jar"/>
+	       <include name="org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+	     </fileset>
+
+	  </path>
+	
+  <target name="compile" depends="init"
+        description="compile the source">
+  	
+
+    <!-- Compile the Java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}"
+    	classpathref="testcase.path">
+    </javac>
+  </target>
+
+  <target name="dist" depends="compile"
+        description="generate the distribution">
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    <jar jarfile="${dist}/lib/AntProject-${DSTAMP}.jar" basedir="${build}"/>
+  </target>
+
+  
+    
+	
+	<target name = "run" depends="compile">
+		
+		<echo message=" compiling "/>
+				
+		<junit fork ="yes" haltonfailure="no" printsummary="yes">
+			<formatter type="plain" usefile="false" />	
+		    <test name= "junit.example" todir ="${report}"/>
+			  <classpath> 
+				  <pathelement location ="/Users/urvashimehta/.p2/pool/plugins/org.junit_4.13.2.v20211018-1956.jar"/>
+				  <pathelement location ="${build}"/>
+			  </classpath>
+		</junit>
+	</target>	   		
+	<target name = "report"  depends="run">	
+		  <mkdir dir="${report}"/>	
+	      <junitreport todir="${report}">
+	   
+			<report todir="${report}"/>
+			<report format="frames" todir="${report}/html"/>
+		 </junitreport>
+	   </target>
+	
+</project>
