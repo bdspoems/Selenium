@@ -1,0 +1,5 @@
+created a class with ExtentReports, ExtentSparkReporter and ExtentTest
+made a @test in same class logging info for the reports using test object.
+reports.fush to generate reports
+a test-output dir is created when proj refreshed.it has index.html report file which is the normal testng report. 
+Another report due to ExtentReport is generated in reports folder that was created by sparkreporter. It has detailed logs.

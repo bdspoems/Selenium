@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-12T15:18:20 PST" name="Default suite" finished-at="2022-12-12T15:18:21 PST" duration-ms="996">
+    <groups>
+    </groups>
+    <test started-at="2022-12-12T15:18:20 PST" name="Default test" finished-at="2022-12-12T15:18:21 PST" duration-ms="996">
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:testcases.LoginTest@74751b3]" started-at="2022-12-12T15:18:20 PST" name="init" finished-at="2022-12-12T15:18:21 PST" duration-ms="417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="login()[pri:0, instance:testcases.LoginTest@74751b3]" started-at="2022-12-12T15:18:21 PST" name="login" finished-at="2022-12-12T15:18:21 PST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.LoginTest@74751b3]" started-at="2022-12-12T15:18:21 PST" name="quit" finished-at="2022-12-12T15:18:21 PST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
