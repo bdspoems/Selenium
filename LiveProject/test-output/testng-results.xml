@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SuiteAB" duration-ms="0" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+    <groups>
+    </groups>
+  </suite> <!-- SuiteAB -->
+  <suite name="SuiteA" duration-ms="1216" started-at="2022-12-14T13:54:51 PST" finished-at="2022-12-14T13:54:52 PST">
+    <groups>
+    </groups>
+    <test name="MyTestA" duration-ms="1073" started-at="2022-12-14T13:54:51 PST" finished-at="2022-12-14T13:54:52 PST">
+      <class name="testcases.suitea.TestA">
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suitea.TestA@2eda0940]" name="start" is-config="true" duration-ms="476" started-at="2022-12-14T13:54:51 PST" finished-at="2022-12-14T13:54:51 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestA.tesA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestA@2eda0940] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tesA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestA@2eda0940]" name="tesA" duration-ms="24" started-at="2022-12-14T13:54:51 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:51 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesA -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suitea.TestA@2eda0940]" name="tear" is-config="true" duration-ms="465" started-at="2022-12-14T13:54:51 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suitea.TestA@2eda0940]" name="start" is-config="true" duration-ms="1" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestA.tesA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestA@2eda0940] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tesA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestA@2eda0940]" name="tesA" duration-ms="3" started-at="2022-12-14T13:54:52 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesA -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suitea.TestA@2eda0940]" name="tear" is-config="true" duration-ms="30" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+      </class> <!-- testcases.suitea.TestA -->
+    </test> <!-- MyTestA -->
+    <test name="MyTestAA" duration-ms="72" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+      <class name="testcases.suitea.TestAA">
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suitea.TestAA@4f51b3e0]" name="start" is-config="true" duration-ms="1" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestAA.tesAA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestAA@4f51b3e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tesAA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestAA@4f51b3e0]" name="tesAA" duration-ms="2" started-at="2022-12-14T13:54:52 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesAA -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suitea.TestAA@4f51b3e0]" name="tear" is-config="true" duration-ms="27" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suitea.TestAA@4f51b3e0]" name="start" is-config="true" duration-ms="0" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestAA.tesAA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestAA@4f51b3e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tesAA(java.lang.String,java.lang.String)[pri:0, instance:testcases.suitea.TestAA@4f51b3e0]" name="tesAA" duration-ms="6" started-at="2022-12-14T13:54:52 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesAA -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suitea.TestAA@4f51b3e0]" name="tear" is-config="true" duration-ms="29" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+      </class> <!-- testcases.suitea.TestAA -->
+    </test> <!-- MyTestAA -->
+  </suite> <!-- SuiteA -->
+  <suite name="SuiteB" duration-ms="235" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+    <groups>
+    </groups>
+    <test name="MyTestB" duration-ms="143" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+      <class name="testcases.suiteb.TestB">
+        <test-method status="PASS" signature="tesB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestB@7f416310]" name="tesB" duration-ms="2" started-at="2022-12-14T13:54:52 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesB -->
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suiteb.TestB@7f416310]" name="start" is-config="true" duration-ms="0" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestB.tesB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestB@7f416310] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suiteb.TestB@7f416310]" name="tear" is-config="true" duration-ms="39" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suiteb.TestB@7f416310]" name="start" is-config="true" duration-ms="1" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestB.tesB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestB@7f416310] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tesB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestB@7f416310]" name="tesB" duration-ms="3" started-at="2022-12-14T13:54:52 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesB -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suiteb.TestB@7f416310]" name="tear" is-config="true" duration-ms="89" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+      </class> <!-- testcases.suiteb.TestB -->
+    </test> <!-- MyTestB -->
+    <test name="MyTestBB" duration-ms="88" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+      <class name="testcases.suiteb.TestBB">
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suiteb.TestBB@140e5a13]" name="start" is-config="true" duration-ms="0" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestBB.tesBB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestBB@140e5a13] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tesBB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestBB@140e5a13]" name="tesBB" duration-ms="4" started-at="2022-12-14T13:54:52 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesBB -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suiteb.TestBB@140e5a13]" name="tear" is-config="true" duration-ms="30" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+        <test-method status="PASS" signature="start(org.testng.ITestResult)[pri:0, instance:testcases.suiteb.TestBB@140e5a13]" name="start" is-config="true" duration-ms="2" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=TestBB.tesBB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestBB@140e5a13] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="tesBB(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.suiteb.TestBB@140e5a13]" name="tesBB" duration-ms="9" started-at="2022-12-14T13:54:52 PST" data-provider="getDataSuitea" finished-at="2022-12-14T13:54:52 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[u2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesBB -->
+        <test-method status="PASS" signature="tear()[pri:0, instance:testcases.suiteb.TestBB@140e5a13]" name="tear" is-config="true" duration-ms="31" started-at="2022-12-14T13:54:52 PST" finished-at="2022-12-14T13:54:52 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear -->
+      </class> <!-- testcases.suiteb.TestBB -->
+    </test> <!-- MyTestBB -->
+  </suite> <!-- SuiteB -->
+</testng-results>

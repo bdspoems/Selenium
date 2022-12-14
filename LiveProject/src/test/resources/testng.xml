@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SuiteAB">
+	
+	<suite-files>
+		<suite-file path="src/test/resources/suitea.xml"></suite-file>
+		<suite-file path="src/test/resources/suiteb.xml"></suite-file>
+		<!--this is not working
+		  <properties>
+			<property>
+				<name>
+			suiteThreadPoolSize
+		       </name>
+				<value>
+	       		2
+	         	</value>
+			</property>
+		</properties>
+		</configuration>-->
+	</suite-files>
+</suite>
